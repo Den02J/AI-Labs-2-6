@@ -2,17 +2,21 @@ package Lab4;
 
 public class Car extends Transport{
     public String typeOfTransport = "Car";
-    public String modelName;
-    public String color;
-    public String engine;
-
-    public Car(String modelName, String color, String engine) {
-        this.modelName = modelName;
-        this.color = color;
-        this.engine = engine;
-    }
+    public Boolean hasConditioner = true;
+    public Transport transport;
 
     public Car() {
+        this.transport = new Transport();
     }
+
+    public Boolean is(String string) {
+        return string.equals("Transport") || string.equals("Car");
+    }
+
+    public Boolean has(String string) {
+        return transport.has(string) || string.equals("Conditioner") || string.equals("Window");
+    }
+
+
 
 }

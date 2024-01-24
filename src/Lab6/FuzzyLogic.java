@@ -2,7 +2,10 @@ package Lab6;
 
 public class FuzzyLogic {
     public static void main(String[] args) {
-        Company Oriflame = new Company(500, 800);
-        Oriflame.analysis();
+        Temperature temp = new Temperature();
+        System.out.println(temp.cold(9));
+        System.out.println(temp.ok(22));
+        System.out.println(temp.hot(38));
+
     }
 }
